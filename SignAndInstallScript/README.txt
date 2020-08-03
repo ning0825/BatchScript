@@ -6,3 +6,5 @@
 卸载脚本：进入安装目录（C:\Program Files\SignAndInstall），右键UninstallScript.bat，以管理员身份运行。
 
 安装完成后可以删除压缩包及解压出的文件夹。
+
+安装时杀毒软件可能会报毒，允许即可。

@@ -31,13 +31,13 @@ copy %~dp0\files\SignAndInstall.bat %installPath% >nul
 
 :: add script to regedit
 reg add HKEY_LOCAL_MACHINE\SOFTWARE\Classes\.apk\shell\SignAndInstall /f >nul
-reg add HKEY_LOCAL_MACHINE\SOFTWARE\Classes\.apk\shell\SignAndInstall\command /t reg_sz /d "C:\Program Files\SignAndInstall\SignAndInstall.bat %%1" /f >nul
+reg add HKEY_LOCAL_MACHINE\SOFTWARE\Classes\.apk\shell\SignAndInstall\command /t reg_sz /d "C:\Program Files\SignAndInstall\SignAndInstall.bat \"%%1\"" /f >nul
 
 reg add HKEY_LOCAL_MACHINE\SOFTWARE\Classes\.apk\shell\Install /f >nul
-reg add HKEY_LOCAL_MACHINE\SOFTWARE\Classes\.apk\shell\Install\command /t reg_sz /d "C:\Program Files\SignAndInstall\install.bat %%1" /f >nul
+reg add HKEY_LOCAL_MACHINE\SOFTWARE\Classes\.apk\shell\Install\command /t reg_sz /d "C:\Program Files\SignAndInstall\install.bat \"%%1\"" /f >nul
 
 reg add HKEY_LOCAL_MACHINE\SOFTWARE\Classes\.apk\shell\Sign /f >nul
-reg add HKEY_LOCAL_MACHINE\SOFTWARE\Classes\.apk\shell\Sign\command /t reg_sz /d "C:\Program Files\SignAndInstall\sign.bat %%1" /f >nul
+reg add HKEY_LOCAL_MACHINE\SOFTWARE\Classes\.apk\shell\Sign\command /t reg_sz /d "C:\Program Files\SignAndInstall\sign.bat \"%%1\"" /f >nul
 
 echo Finish.
 
